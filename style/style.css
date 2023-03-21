@@ -1,23 +1,25 @@
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #333;
 }
-
-.pacman {
+body .wrap {
+  display: flex;
+  align-items: center;
+  width: 900px;
+  height: 160px;
+}
+body .wrap .pacman {
   position: relative;
   width: 160px;
   height: 160px;
 }
-.pacman:before, .pacman:after {
+body .wrap .pacman:before, body .wrap .pacman:after {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
   left: 0;
   width: 0;
   height: 0;
@@ -27,32 +29,52 @@ body {
   -webkit-animation: animate1 linear 0.5s infinite;
           animation: animate1 linear 0.5s infinite;
 }
-.pacman:after {
+body .wrap .pacman:after {
   -webkit-animation: animate2 linear 0.5s infinite;
           animation: animate2 linear 0.5s infinite;
 }
-.pacman div:nth-child(1), .pacman div:nth-child(2), .pacman div:nth-child(3) {
-  background-color: #ffd000;
+body .wrap .pacman .dot:nth-child(-n+8) {
+  background-color: azure;
   border-radius: 50%;
   width: 25px;
   height: 25px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -100px;
+  right: -700px;
   opacity: 0;
 }
-.pacman div:nth-child(1) {
-  -webkit-animation: ball 1s 1s infinite linear;
-          animation: ball 1s 1s infinite linear;
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(1) {
+  -webkit-animation: ball 3s 0s infinite linear;
+          animation: ball 3s 0s infinite linear;
 }
-.pacman div:nth-child(2) {
-  -webkit-animation: ball 1s 0.5s infinite linear;
-          animation: ball 1s 0.5s infinite linear;
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(2) {
+  -webkit-animation: ball 3s 0.5s infinite linear;
+          animation: ball 3s 0.5s infinite linear;
 }
-.pacman div:nth-child(3) {
-  -webkit-animation: ball 1s 0s infinite linear;
-          animation: ball 1s 0s infinite linear;
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(3) {
+  -webkit-animation: ball 3s 1s infinite linear;
+          animation: ball 3s 1s infinite linear;
+}
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(4) {
+  -webkit-animation: ball 3s 1.5s infinite linear;
+          animation: ball 3s 1.5s infinite linear;
+}
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(5) {
+  -webkit-animation: ball 3s 2s infinite linear;
+          animation: ball 3s 2s infinite linear;
+}
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(6) {
+  -webkit-animation: ball 3s 2.5s infinite linear;
+          animation: ball 3s 2.5s infinite linear;
+}
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(7) {
+  -webkit-animation: ball 3s 3s infinite linear;
+          animation: ball 3s 3s infinite linear;
+}
+body .wrap .pacman .dot:nth-child(-n+8):nth-child(8) {
+  -webkit-animation: ball 3s 3.5s infinite linear;
+          animation: ball 3s 3.5s infinite linear;
 }
 
 @-webkit-keyframes animate1 {
@@ -101,18 +123,18 @@ body {
   }
 }
 @-webkit-keyframes ball {
-  20%, 80% {
+  10%, 90% {
     opacity: 1;
   }
   100% {
-    transform: translate(-120px, -50%);
+    transform: translate(-750px, -50%);
   }
 }
 @keyframes ball {
-  20%, 80% {
+  10%, 90% {
     opacity: 1;
   }
   100% {
-    transform: translate(-120px, -50%);
+    transform: translate(-750px, -50%);
   }
 }/*# sourceMappingURL=style.css.map */
